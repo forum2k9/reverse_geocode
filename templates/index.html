@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse Geocoding App...</title>
+	<link rel="stylesheet" href="static/styles.css">
+	<script src="static/script.js"></script>
+
+</head>
+<body>
+
+<center>
+
+<br>
+<br>
+	<h1>Bulk Convert Lat./Long. to Addresses</h1>
+	<!-- <h2>xxxxxxx =========== xxxxxxxxx</h2> -->
+
+
+<!-- 	<form method="post" action="/r_geocoder" enctype="multipart/form-data">
+		<input type="file" name="data_file" accept=".csv" />
+		<input type="submit" />
+	</form> -->
+
+	 
+		<form method="post" action="/r_geocoder" enctype="multipart/form-data">
+ 			<div class="input-file-container">
+
+			    <input class="input-file" id="my-file" type="file" name="data_file" accept=".csv">
+				<label tabindex="0" for="my-file" class="input-file-trigger">Select CSV file...</label>
+
+			    <br>
+			    <input size="150" type="submit" value="Start Geocoding" disabled style="background-color: #b3b3b3; width: 200px; height: 50px font-size: 240px" />
+
+			    <i style="font-size: 12px" >*Select CSV file to enable the button</i>
+			</div>	
+
+		  <p class="file-return"></p>
+		</form>
+	
+
+
+	<p class="txtcenter" style="background-color: red" >
+	<h3></h3>
+	* The uploaded CSV file most contain "Latitude"	and "Longitude" columns as seen below... <br>
+
+		<img src="static/sample_csv.png">
+	</p>
+
+	<p class="txtcenter copy"> Using <a href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse">GoogleV3 Reverse Geocoding API - 2018</a><br /> </p>
+	<!-- Code written by: www.UmarYusuf.com -->
+
+<!-- Disable submit button until file selected for upload - http://jsfiddle.net/E42XA/ -->
+<script src="static/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+    function(){
+        $('input:file').change(
+            function(){
+                if ($(this).val()) {
+                    $('input:submit').attr('disabled',false); 
+                } 
+            }
+            );
+    });
+
+</script>
+
+</center>
+</body>
+</html>
+
+
+
