@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reverse Geocoding App App...</title>
+	<title>Reverse Geocoding App...</title>
 </head>
 <body>
 
@@ -9,13 +10,14 @@
 
 <br>
 <br>
-	<h1>Bulk Convert Lat./Long. to Addresses</h1>
+	<h1>Convert Lat./Long. to Addresses</h1>
 
-	<img src="static/Coming_soon.png">
+	<form method="post" action="/r_geocoder">
+		Enter Latitude: <input type="text" name="mylat">
+		Enter Longitude: <input type="text" name="mylong">
+		<input type="submit" value="Send Request">
+	</form>
 
 </center>
 </body>
 </html>
-
-
-
