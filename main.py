@@ -40,7 +40,7 @@ def r_geocoder():
 	for lat, lon in zip(col_lat, col_long):
 		try:
 			try: # Google API
-				nom = GoogleV3XX(api_key="AIzaSyDhmLVNREF7BUcX7UQ87euCR-yz0h3frXE")
+				nom = GoogleV3(api_key="AIzaSyDhmLVNREF7BUcX7UQ87euCR-yz0h3frXE")
 				n = nom.reverse((lat, lon), timeout=10) # Lat, Long
 
 				data = (lat, lon, n[0])
