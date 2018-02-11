@@ -3,6 +3,9 @@ from geopy.geocoders import Nominatim, ArcGIS, GoogleV3
 from flask import Flask, render_template, request
 # import requests
 
+written_by = "www.UmarYusuf.com"
+
+
 app = Flask(__name__)
 
 
